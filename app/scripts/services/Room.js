@@ -5,8 +5,9 @@
 
     return {
       all: rooms,
+      //need a function to add a room to the firebase.database
       addRoom: function(roomName) {
-          //rooms.$add({'roomName':roomName})
+          rooms.$add({'roomName':roomName})
       }
     };
   }

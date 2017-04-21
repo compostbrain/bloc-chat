@@ -1,0 +1,17 @@
+<div ng-controller="RoomNameModalCtrl as $ctrl" class="ModalCtrl">
+
+  <div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Create New Room</h3>
+  </div>
+  <div class="modal-body" id="modal-body">
+    <!-- prompt for entering a new room -->
+    <h5>Enter a room name:</h5>
+    <!-- need a textbox here -->
+    <input type="text" ng-model="roomName">
+
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-lg btn-primary" type="button" ng-click="$ctrl.createRoom(roomName)">Create Room</button>
+    <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+  </div>
+</div>
