@@ -1,6 +1,6 @@
 <div>
-  <ul class='' ng-repeat="room in home.rooms">
-    <li>{{ room.$value }}</li>
+  <ul>
+    <li ng-repeat="room in rooms | filter:name">{{ room | json }}</li>
 
 
   </ul>

@@ -1,5 +1,5 @@
 (function() {
-  function RoomNameModalCtrl($uibModal) {
+  function RoomNameModalCtrl($uibModal, Room) {
 
 
 
@@ -8,15 +8,16 @@
 
 
     //       //cancel method
-    //need to access the scope associated with the modal content to close it using $dismiss method 
+    //need to access the scope associated with the modal content to close it using $dismiss method
     this.cancel = function() {
-      HomeCtrl.openNewRoomModal.$dismiss('cancel');
+      roomNameModal.$dismiss('cancel');
     };
 
     //submit data to firebase method
     this.createRoom = function() {
-      room.addRoom(roomName);
-      scope.$close('added a room');
+      close(Room.addRoom(roomName));
+
+
     };
   }
   angular
