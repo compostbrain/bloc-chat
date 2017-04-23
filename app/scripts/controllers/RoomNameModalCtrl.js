@@ -1,26 +1,13 @@
 (function() {
-  function RoomNameModalCtrl($uibModal, Room) {
+  function RoomNameModalCtrl($scope, $uibModalInstance, Room) {
+    $scope.rooms = Room.all;
 
-
-
-
-
-
-
-    //       //cancel method
-    //need to access the scope associated with the modal content to close it using $dismiss method
-    this.cancel = function() {
-      roomNameModal.$dismiss('cancel');
-    };
-
-    //submit data to firebase method
-    this.createRoom = function() {
-      close(Room.addRoom(roomName));
-
-
+    $scope.createNewRoom = function() {
+      Room.addRoom($scope.newRoomName);
+      $uibModalInstance.close();
     };
   }
   angular
     .module('blocChat')
-    .controller('RoomNameModalCtrl', ['$uibModal', RoomNameModalCtrl]);
+    .controller('RoomNameModalCtrl', ['$scope', '$uibModalInstance', 'Room', RoomNameModalCtrl]);
 })();

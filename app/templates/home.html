@@ -1,6 +1,6 @@
 <div>
   <ul>
-    <li ng-repeat="room in rooms | filter:name">{{ room | json }}</li>
+    <li ng-repeat="room in rooms">{{ room.$value }}</li>
 
 
   </ul>
@@ -8,5 +8,5 @@
 </div>
 
 <div>
-  <button type="button" class="btn btn-default" ng-click="home.openNewRoomModal()">Create A New Room</button>
+  <button type="button" class="btn btn-default" ng-click="openNewRoomModal()">Create A New Room</button>
 </div>

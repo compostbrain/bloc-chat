@@ -1,17 +1,14 @@
-<div ng-controller="RoomNameModalCtrl as $ctrl" class="ModalCtrl">
+<div class="ModalCtrl">
 
   <div class="modal-header">
     <h3 class="modal-title text-center" id="modal-title">Create New Room</h3>
   </div>
   <div class="modal-body" id="modal-body">
     <!-- prompt for entering a new room -->
-    <h5>Enter a room name:</h5>
-    <!-- need a textbox here -->
-    <input type="text" ng-model="roomName">
-
+    Enter a room name:<input type="text" ng-model="newRoomName" />
   </div>
   <div class="modal-footer">
-    <button class="btn btn-lg btn-primary" type="button" ng-click="roomNameModalCtrl.createRoom(roomName);">Create Room</button>
-    <button class="btn btn-warning" type="button" ng-click="$dismiss('no entry')">Cancel</button>
+    <button class="btn btn-lg btn-primary" type="button" ng-click="createNewRoom();">Create New Room</button>
+    <button class="btn btn-warning" type="button" ng-click="$dismiss()">Cancel</button>
   </div>
 </div>
