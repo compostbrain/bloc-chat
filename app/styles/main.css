@@ -1,0 +1,22 @@
+.top {
+    position:absolute;
+    left:0; right:0;
+    height: 92px;
+}
+.sidebar {
+    position:absolute;
+    left:0; top:0; bottom: 0;
+    width: 300px;
+    padding-left: 20 px;
+}
+.sidebar .room-name:hover {
+    cursor: pointer;
+}
+.messages {
+    position: absolute;
+    left:300px; top:92px; right:0; bottom:0;
+}
+
+.top { background: grey; }
+.sidebar { background: #ad4ea1; }
+.messages { background: white; }
