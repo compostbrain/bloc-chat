@@ -5,10 +5,10 @@
   </div>
   <div class="modal-body" id="modal-body">
     <!-- prompt for entering a new room -->
-    Enter a room name:<input type="text" ng-model="newRoomName" />
+    Enter a room name:<input type="text" name="input" ng-model="modal.newRoomName.name">
   </div>
   <div class="modal-footer">
-    <button class="btn btn-lg btn-primary" type="button" ng-click="createNewRoom();">Create New Room</button>
+    <button class="btn btn-lg btn-primary" type="button" ng-click="modal.createNewRoom();">Create New Room</button>
     <button class="btn btn-warning" type="button" ng-click="$dismiss()">Cancel</button>
   </div>
 </div>

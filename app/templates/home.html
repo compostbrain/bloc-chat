@@ -1,12 +1,12 @@
+<div class="sidebar">
+  <div class="sidebar-header">
+          <h1 class="sidebar-title">Bloc Chat</h1>
+
+      </div>
+      <div class="sidebar-body" ng-repeat="room in home.rooms">
+          <p class="room-name">{{ room.name }}</p>
+      </div>
+
 <div>
-  <ul>
-    <li ng-repeat="room in rooms">{{ room.$value }}</li>
-
-
-  </ul>
-
-</div>
-
-<div>
-  <button type="button" class="btn btn-default" ng-click="openNewRoomModal()">Create A New Room</button>
+  <button type="button" class="btn btn-default" ng-click="home.openNewRoomModal()">Create A New Room</button>
 </div>
