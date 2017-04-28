@@ -5,7 +5,7 @@
             $cookies.put('blocChatCurrentUser', this.username);
             $uibModalInstance.close();
             var currentUser = $cookies.get('blocChatCurrentUser');
-            console.log ("Current Username is" + JSON.stringify(currentUser));
+            console.log ("Current Username is " + JSON.stringify(currentUser));
         };
     }
 
